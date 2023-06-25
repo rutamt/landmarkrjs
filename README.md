@@ -6,6 +6,7 @@ This version of Landmarkr is entirely built using JavaScript, providing a differ
 
 ## How do I play?
 
+Go to [rutamt.github.io/landmarkrjs](https://rutamt.github.io/landmarkrjs/)
 1. In the top right corner of the screen, a location will be displayed.
 2. Examine the given location and try to identify the corresponding landmark on the map.
 3. Click on the map where you think the landmark is located.
