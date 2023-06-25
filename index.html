@@ -34,7 +34,7 @@
         <div class="modal-content">
             <span class="close" onclick="hideScoreModal()">&times;</span> <!-- Add the "x" button -->
             <h2 id="score-text"></h2>
-            <img id="landmark-photo" src="{{photo}}">
+            <img id="landmark-photo" src="">
             <p id="summary-text">summary</p>
             <p id="congrats-text">Your score is based on the proximity to the landmark.</p>
             <p id="distance-from-point"></p>
@@ -51,6 +51,7 @@
         <h3>How do I play?</h3>
         <p>In the top right, a location is displayed. Click on the map where you think the location is!</p>
         <p>There are infinite rounds, but when you hit the end game button, your score will reset</p>
+        <p>If you get an error where your score is NaN, simply hit the 'End Game' button to fix it.</p>
         <p>Enjoy!</p>
         <button onclick="startGame()">Play</button>
     </div>

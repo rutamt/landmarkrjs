@@ -81,7 +81,7 @@ const lookingForElement = getRandomElementFrom2DArray(landmarks);
 // Filling in the game statistics when page is loaded
 document.addEventListener('DOMContentLoaded', function () {
     // Handling the intro modal
-    if (score === 0) {
+    if (score === 0 && rounds === 1) {
         introModal.style.display = 'block';
         resetButton.style.display = 'none';
         lookingFor.style.display = 'none';
@@ -96,7 +96,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-if (rounds === null) {
+if (rounds === null || isNaN(rounds) || rounds === NaN) {
+    clearScore();
     rounds = 1;
 } else {
     rounds = parseInt(rounds);
