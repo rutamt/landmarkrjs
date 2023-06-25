@@ -34,3 +34,4 @@ Feel free to explore the code and modify it according to your needs. This versio
 ![landmarkr picture 2](https://github.com/rutamt/landmarkr/assets/95180713/9468a047-29be-4423-ba6a-cef5ab7ebb47)
 ![landmarkr picture 3](https://github.com/rutamt/landmarkr/assets/95180713/78dda71c-435b-44a8-aa0a-a2f6395a8334)
 
+Note: While mobile does work, desktop is a much better experience
