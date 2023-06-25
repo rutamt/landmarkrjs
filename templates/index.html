@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Landmarkr</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
+    <script src="{{ url_for('static', filename='js/index.js')}}" defer></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png')}}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png')}}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png')}}">
+
+</head>
+
+<body>
+    <div id="score-container">
+        <div id="total-score" onmouseover="showModal()" onmouseout="hideModal()"></div>
+        <div id="stats-modal">
+            <h3>Statistics</h3>
+            <p id="stats"></p>
+        </div>
+    </div>
+    <div id="map"></div>
+    <button id="submit-btn" onclick="calculateScore({{landmark_lat}}, {{landmark_lon}})" disabled>Submit</button>
+    <div id="landmark-info">Looking for: {{landmark_name}}</div>
+    <button id="reset-score-btn" onclick="clearScore()">End game</button>
+
+    <!-- Score Modal -->
+    <div id="score-modal" class="modal">
+        <div class="modal-content">
+            <h2 id="score-text"></h2>
+            <img id="landmark-photo" src="{{photo}}">
+            <p>{{summary}}</p>
+            <p id="congrats-text">Your score is based on the proximity to the landmark.</p>
+            <p id="distance-from-point"></p>
+            <div class="btn-container">
+                <button onclick="location.reload()">Next round</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Intro modal -->
+    <div id="intro-modal" class="modal">
+        <h2>Welcome to Landmarkr!</h2>
+        <h3>How do I play?</h3>
+        <p>In the top right, a location is displayed. Click on the map where you think the location is!</p>
+        <p>There are infinite rounds, but when you hit the end game button, your score will reset</p>
+        <p>Enjoy!</p>
+        <button onclick="startGame()">Play</button>
+    </div>
+    </div>
+
+    <!-- Final score modal -->
+    <div id="final-modal" class="modal">
+        <h2>Final stats: </h2>
+        <div class="final-modal-content">
+            <h2 id="final-score-text"></h2>
+            <button onclick="location.reload()">Restart</button>
+        </div>
+    </div>
+</body>
+
+</html>
