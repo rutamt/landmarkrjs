@@ -15,9 +15,9 @@ const submitButton = document.getElementById('submit-btn');
 const lookingFor = document.getElementById('landmark-info');
 const introModal = document.getElementById('intro-modal');
 
-// console.log("Rounds", rounds)
+// // console.log("Rounds", rounds)
 var roundScore = 1000 * rounds - 1000;
-// console.log("RS ", roundScore);
+// // console.log("RS ", roundScore);
 const guessAcuracy = (totalScore / roundScore) * 100;
 
 //The List with all the data:
@@ -91,13 +91,13 @@ document.addEventListener('DOMContentLoaded', function () {
     statsElement.innerHTML = `<pre>Rounds: ${rounds}\nAverage distance: ${Math.round((distance / rounds) * 100) / 100} Km\nAccuracy: ${Math.round(guessAcuracy * 100) / 100}%</pre>`;
     lookingFor.textContent = `Looking for: ${lookingForElement[0]}`;
 
-    console.log(lookingForElement);
-    console.log(lookingForElement[0]);
+    // console.log(lookingForElement);
+    // console.log(lookingForElement[0]);
 
 });
 
 if (rounds === null || isNaN(rounds) || rounds === NaN) {
-    clearScore();
+    stealthClearScore();
     rounds = 1;
 } else {
     rounds = parseInt(rounds);
@@ -117,7 +117,7 @@ function startGame() {
     map.on("click", onMapClick);
 }
 
-console.log("Changing totalScore");
+// console.log("Changing totalScore");
 totalScoreElement.textContent = `Total Score: ${totalScore} / ${roundScore}`;
 
 if (score === null) {
@@ -138,9 +138,9 @@ function updateScore(newScore, newDistance) {
     var currentDistance = parseInt(localStorage.getItem('distance'));
     currentDistance += newDistance;
     localStorage.setItem('distance', currentDistance);
-    console.log(`CD: ${currentDistance}, td = ${distance}`);
+    // console.log(`CD: ${currentDistance}, td = ${distance}`);
 
-    console.log("Rounds from US", localStorage.getItem('rounds'))
+    // console.log("Rounds from US", localStorage.getItem('rounds'))
     document.getElementById('total-score').textContent = 'Score: ' + currentScore + ' / ' + 1000 * currentRounds;
     localStorage.setItem('rounds', currentRounds + 1);
 
@@ -149,10 +149,7 @@ function updateScore(newScore, newDistance) {
 
 // Clear the score from localStorage
 function clearScore() {
-    // const scoreModal = document.getElementById('score-modal');
-    // if (scoreModal.style.display === 'block') {
-    //     scoreModal.style.display = 'none';
-    // }
+
     finalModal.style.display = 'block';
     submitButton.style.display = 'none';
     resetButton.style.display = 'none';
@@ -169,6 +166,15 @@ function clearScore() {
     localStorage.setItem('rounds', rounds);
 }
 
+// Clear the score from localStorage without any visual feedback. Works for the first time a user gets on
+function stealthClearScore() {
+    score = 0;
+    rounds = 1;
+    document.getElementById('total-score').textContent = 'Score: ' + score + ' / ' + 1000 * rounds;
+    localStorage.setItem('score', score);
+    localStorage.setItem('distance', score);
+    localStorage.setItem('rounds', rounds);
+}
 
 function onMapClick(e) {
     if (marker) {
@@ -308,7 +314,7 @@ img.addEventListener('load', function () {
 const modal = document.getElementById('score-modal');
 function hideScoreModal() {
     document.getElementById('score-modal').style = "none";
-    console.log("Showing submit-btn")
+    // console.log("Showing submit-btn")
     const submitButton = document.getElementById("submit-btn");
     submitButton.innerText = "Next Round";
     submitButton.onclick = function () {
