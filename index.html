@@ -3,16 +3,16 @@
 
 <head>
     <title>Landmarkr</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css')}}">
-    <script src="{{ url_for('static', filename='js/index.js')}}" defer></script>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/index.js" defer></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.css" />
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- Favicon -->
-    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon/apple-touch-icon.png')}}">
-    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon/favicon-32x32.png')}}">
-    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon/favicon-16x16.png')}}">
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
 
 </head>
 
@@ -25,7 +25,7 @@
         </div>
     </div>
     <div id="map"></div>
-    <button id="submit-btn" onclick="calculateScore({{landmark_lat}}, {{landmark_lon}})" disabled>Submit</button>
+    <button id="submit-btn" onclick="calculateScore()" disabled>Submit</button>
     <div id="landmark-info">Looking for: {{landmark_name}}</div>
     <button id="reset-score-btn" onclick="clearScore()">End game</button>
 
