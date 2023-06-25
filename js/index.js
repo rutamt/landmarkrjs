@@ -9,7 +9,7 @@ const totalScore = localStorage.getItem('score');
 const statsElement = document.getElementById('stats');
 
 var finalTextElement = document.getElementById('final-score-text');
-var scoreModal = document.getElementById('final-modal');
+var finalModal = document.getElementById('final-modal');
 var resetButton = document.getElementById('reset-score-btn');
 const submitButton = document.getElementById('submit-btn');
 const lookingFor = document.getElementById('landmark-info');
@@ -148,7 +148,11 @@ function updateScore(newScore, newDistance) {
 
 // Clear the score from localStorage
 function clearScore() {
-    scoreModal.style.display = 'block';
+    // const scoreModal = document.getElementById('score-modal');
+    // if (scoreModal.style.display === 'block') {
+    //     scoreModal.style.display = 'none';
+    // }
+    finalModal.style.display = 'block';
     submitButton.style.display = 'none';
     resetButton.style.display = 'none';
     lookingFor.style.display = 'none';
@@ -224,6 +228,13 @@ function calculateScore() {
         congratsLine.textContent = `Great job! Only ${1000 - score} point${1000 - score == 1 ? "" : "s"} from perfection!`
     }
 
+    // Putting the summary and image into the score modal
+    const summaryText = document.getElementById('summary-text');
+    summaryText.textContent = lookingForElement[3];
+    const landmarkPhoto = document.getElementById('landmark-photo');
+    landmarkPhoto.src = lookingForElement[4];
+
+    // Updating the localstorage score and showing the score modal
     updateScore(parseInt(formattedScore), formattedDistance);
     scoreModal.style.display = 'block';
 
@@ -291,3 +302,18 @@ img.addEventListener('load', function () {
         img.height = height;
     }
 });
+
+// Get the modal element and the close button
+const modal = document.getElementById('score-modal');
+function hideScoreModal() {
+    document.getElementById('score-modal').style = "none";
+    console.log("Showing submit-btn")
+    const submitButton = document.getElementById("submit-btn");
+    submitButton.innerText = "Next Round";
+    submitButton.onclick = function () {
+        location.reload();
+    };
+    submitButton.style.display = "block";
+}
+
+

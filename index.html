@@ -32,9 +32,10 @@
     <!-- Score Modal -->
     <div id="score-modal" class="modal">
         <div class="modal-content">
+            <span class="close" onclick="hideScoreModal()">&times;</span> <!-- Add the "x" button -->
             <h2 id="score-text"></h2>
             <img id="landmark-photo" src="{{photo}}">
-            <p>{{summary}}</p>
+            <p id="summary-text">summary</p>
             <p id="congrats-text">Your score is based on the proximity to the landmark.</p>
             <p id="distance-from-point"></p>
             <div class="btn-container">
@@ -42,6 +43,7 @@
             </div>
         </div>
     </div>
+
 
     <!-- Intro modal -->
     <div id="intro-modal" class="modal">
