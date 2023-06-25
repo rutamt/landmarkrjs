@@ -90,6 +90,33 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+/* Mobile Responsive Styles */
+@media only screen and (max-width: 768px) {
+
+    #score-modal,
+    #final-modal,
+    #intro-modal {
+        width: 90%;
+        max-width: 400px;
+    }
+}
+
+/* Landscape Mode Styles */
+@media only screen and (max-width: 1024px) and (orientation: landscape) {
+
+    #score-modal,
+    #final-modal,
+    #intro-modal {
+        max-width: 80%;
+    }
+
+    #landmark-photo {
+        display: none;
+    }
+
+}
+
+
 #landmark-photo {
     width: 55%;
     border-radius: 5px;
