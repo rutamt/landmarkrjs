@@ -187,17 +187,35 @@ function stealthClearScore() {
     localStorage.setItem('distance', score);
     localStorage.setItem('rounds', rounds);
 }
-
 function onMapClick(e) {
-    if (marker) {
-        map.removeLayer(marker);
-    }
+    const clickX = e.originalEvent.clientX;
+    const clickY = e.originalEvent.clientY;
 
-    marker = L.marker(e.latlng).addTo(map);
-    $("#latitude").val(e.latlng.lat.toFixed(6));
-    $("#longitude").val(e.latlng.lng.toFixed(6));
-    $("#submit-btn").prop("disabled", false).show();
+    const submitButton = document.querySelector('#submit-btn');
+    const buttonRect = submitButton.getBoundingClientRect();
+
+    const buttonX = buttonRect.left + buttonRect.width / 2;
+    const buttonY = buttonRect.top + buttonRect.height / 2;
+
+    const distance = Math.sqrt(
+        Math.pow(clickX - buttonX, 2) +
+        Math.pow(clickY - buttonY, 2)
+    );
+
+    const thresholdDistance = 75; // Adjust this value as needed
+
+    if (distance > thresholdDistance) {
+        if (marker) {
+            map.removeLayer(marker);
+        }
+
+        marker = L.marker(e.latlng).addTo(map);
+        $("#latitude").val(e.latlng.lat.toFixed(6));
+        $("#longitude").val(e.latlng.lng.toFixed(6));
+        $("#submit-btn").prop("disabled", false).show();
+    }
 }
+
 
 map.on("click", onMapClick);
 
