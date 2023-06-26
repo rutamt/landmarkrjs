@@ -1,4 +1,16 @@
-var map = L.map("map").setView([0, 0], 2);
+// Define the bounds of the map
+const southWest = L.latLng(-90, -180);
+const northEast = L.latLng(90, 180);
+const bounds = L.latLngBounds(southWest, northEast);
+
+// Create the Leaflet map with maxBounds option
+const map = L.map('map', {
+    center: [35, 20], // Set the initial center of the map
+    zoom: 2, // Set the initial zoom level of the map
+    maxBounds: bounds, // Set the maxBounds option
+    maxBoundsViscosity: 1.0, // Adjust the maxBoundsViscosity if needed
+    minZoom: 3, // Set the limit for zooming out
+});
 var marker;
 var score = localStorage.getItem('score');
 var rounds = localStorage.getItem('rounds');
@@ -193,7 +205,6 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.p
     attribution:
         'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
     maxZoom: 18,
-    retinaMode: true,
 }).addTo(map);
 
 function calculateScore() {
@@ -256,6 +267,12 @@ function calculateScore() {
     });
     // Create a marker at the landmark's location with a different color
     const landmarkMarker = L.marker([landmark_lat, landmark_lon], { icon: greenIcon }).addTo(map);
+
+    // Change the behavior when the marker is clicked
+    landmarkMarker.on('click', function () {
+        scoreModal.style.display = 'block';
+        submitButton.style.display = 'none';
+    });
 
     // Draw a dotted line between the two markers
     const line = L.polyline([[latitude, longitude], [landmark_lat, landmark_lon]], {
