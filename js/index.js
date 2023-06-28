@@ -74,6 +74,65 @@ const landmarks = [
     ["Great Barrier Reef", -18.2871, 147.6992, "The Great Barrier Reef is the world's largest coral reef system, located off the coast of Queensland, Australia.", "https://images.pexels.com/photos/847393/pexels-photo-847393.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
     ["Amazon Rainforest", -3.4653, -62.2159, "The Amazon Rainforest is the largest tropical rainforest in the world, spanning several South American countries.", "https://images.pexels.com/photos/2739664/pexels-photo-2739664.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
     ["Everglades National Park", 25.2866, -80.8987, "Everglades National Park is a unique wetland ecosystem in Florida, USA, recognized as a UNESCO World Heritage Site.", "https://images.pexels.com/photos/11456326/pexels-photo-11456326.png?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Serengeti National Park", -2.3333, 34.8333, "Serengeti National Park is a famous wildlife reserve in Tanzania", "https://images.pexels.com/photos/5574041/pexels-photo-5574041.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Antelope Canyon", 36.8626, -111.3749, "Antelope Canyon is a stunning slot canyon located in Arizona", "https://images.pexels.com/photos/33041/antelope-canyon-lower-canyon-arizona.jpg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Matterhorn", 45.9763, 7.6586, "The Matterhorn is a famous mountain peak in the Swiss Alps.", "https://images.pexels.com/photos/267104/pexels-photo-267104.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Parthenon", 37.9715, 23.7266, "The Parthenon is an ancient Greek temple located on the Acropolis of Athens", "https://images.pexels.com/photos/164336/pexels-photo-164336.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Milan Cathedral", 45.4642, 9.1900, "Milan Cathedral is a magnificent Gothic cathedral located in Milan", "https://images.pexels.com/photos/16517892/pexels-photo-16517892.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Ch\u00e2teau de Versailles", 48.8049, 2.1204, "The Palace of Versailles", "https://images.pexels.com/photos/13692259/pexels-photo-13692259.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["White House", 38.8977, -77.0365, "The White House is the official residence and workplace of the President of the United States.", "https://images.pexels.com/photos/129112/pexels-photo-129112.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Kiyomizu-dera", 34.9948, 135.7850, "Kiyomizu-dera is a historic Buddhist temple in Kyoto", "https://images.pexels.com/photos/16469212/pexels-photo-16469212.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Prague Castle", 50.0909, 14.4005, "Prague Castle is a historic castle complex in Prague", "https://images.pexels.com/photos/3977192/pexels-photo-3977192.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Saint Basil's Cathedral", 55.7525, 37.6231, "Saint Basil's Cathedral is a famous Orthodox church located in Moscow", "https://images.pexels.com/photos/5273637/pexels-photo-5273637.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Saint Peter's Basilica", 41.9022, 12.4539, "Saint Peter's Basilica is a renowned Catholic church in Vatican City.", "https://images.pexels.com/photos/5273637/pexels-photo-5273637.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["La Sagrada Fam\u00edlia", 41.4036, 2.1744, "La Sagrada Família is an iconic basilica designed by Antoni Gaudí in Barcelona", "https://images.pexels.com/photos/13081002/pexels-photo-13081002.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Pyramid of the Sun", 19.6925, -98.8447, "The Pyramid of the Sun is an ancient Mesoamerican pyramid located in Teotihuacan", "https://images.pexels.com/photos/11212909/pexels-photo-11212909.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Mount Fuji", 35.3606, 138.7274, "Mount Fuji is the highest mountain in Japan and an iconic symbol of the country.", "https://images.pexels.com/photos/3408353/pexels-photo-3408353.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Mount Kilimanjaro", -3.0674, 37.3556, "Mount Kilimanjaro is the highest mountain in Africa and a popular destination for climbers.", "https://images.pexels.com/photos/8427984/pexels-photo-8427984.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Burj Khalifa", 25.1972, 55.2744, "Burj Khalifa is the tallest building in the world", "https://images.pexels.com/photos/162031/dubai-tower-arab-khalifa-162031.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Sydney Harbour Bridge", -33.8523, 151.2108, "Sydney Harbour Bridge is an iconic bridge spanning Sydney Harbour in Australia.", "https://images.pexels.com/photos/635632/pexels-photo-635632.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Pompeii", 40.7489, 14.4989, "Pompeii is an ancient Roman city buried by the eruption of Mount Vesuvius in 79 AD.", "https://images.pexels.com/photos/8912460/pexels-photo-8912460.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Buckingham Palace", 51.5014, -0.1419, "Buckingham Palace is the official residence of the British monarch in London", "https://images.pexels.com/photos/1560102/pexels-photo-1560102.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Tower Bridge", 51.5055, -0.0754, "Tower Bridge is a famous landmark and a combined bascule and suspension bridge in London", "https://images.pexels.com/photos/726484/pexels-photo-726484.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Golden Temple", 31.6204, 74.8765, "The Golden Temple", "https://images.pexels.com/photos/574313/pexels-photo-574313.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Redwood National and State Parks", 41.2132, -124.0046, "Redwood National and State Parks are a collection of protected forests in California", "https://images.pexels.com/photos/1784577/pexels-photo-1784577.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Uluru", -25.3444, 131.0369, "Uluru", "https://images.pexels.com/photos/6610368/pexels-photo-6610368.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Kilimanjaro National Park", -3.0757, 37.3530, "Kilimanjaro National Park is a protected area in Tanzania encompassing Mount Kilimanjaro", "https://images.pexels.com/photos/417074/pexels-photo-417074.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Yosemite Valley", 37.7427, -119.5734, "Yosemite Valley is a picturesque glacial valley within Yosemite National Park", "https://images.pexels.com/photos/1571108/pexels-photo-1571108.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Plaza de Espa\u00f1a", 37.3772, -5.9869, "Plaza de España is a grand square in Seville", "https://images.pexels.com/photos/16487643/pexels-photo-16487643.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Fushimi Inari Taisha", 34.9671, 135.7727, "Fushimi Inari Taisha is a Shinto shrine famous for its thousands of vermilion torii gates in Kyoto", "https://images.pexels.com/photos/3995905/pexels-photo-3995905.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Potala Palace", 29.6550, 91.1175, "Potala Palace is a magnificent palace complex in Lhasa", "https://images.pexels.com/photos/165169/pexels-photo-165169.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Lake Baikal", 53.5190, 107.5753, "Lake Baikal is the deepest and oldest freshwater lake in the world", "https://images.pexels.com/photos/8985166/pexels-photo-8985166.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Champs-\u00c9lys\u00e9es", 48.8698, 2.3075, "Champs-Élysées is a famous avenue in Paris", "https://images.pexels.com/photos/17152635/pexels-photo-17152635.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Piazza San Marco", 45.4338, 12.3378, "Piazza San Marco", "https://images.pexels.com/photos/847366/pexels-photo-847366.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Museum of Modern Art", 40.7614, -73.9776, "The Museum of Modern Art (MoMA) is a renowned art museum located in New York City", "https://images.pexels.com/photos/10612538/pexels-photo-10612538.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Golden Pavilion", 35.0395, 135.7290, "The Golden Pavilion", "https://images.pexels.com/photos/16454565/pexels-photo-16454565.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Trevi Fountain", 41.9009, 12.4833, "The Trevi Fountain is a famous Baroque fountain in Rome", "https://images.pexels.com/photos/2031967/pexels-photo-2031967.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Charles Bridge", 50.0865, 14.4119, "Charles Bridge is a historic bridge that crosses the Vltava River in Prague", "https://images.pexels.com/photos/442583/pexels-photo-442583.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Hagia Sophia", 41.0086, 28.9802, "Hagia Sophia is a former Byzantine cathedral and Ottoman mosque", "https://images.pexels.com/photos/16491575/pexels-photo-16491575.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Moai Statues", -27.1212, -109.3664, "The Moai Statues are monolithic human figures carved by the Rapa Nui people on Easter Island", "https://images.pexels.com/photos/2819082/pexels-photo-2819082.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Pamukkale", 37.9215, 29.1187, "Pamukkale is a natural site in Turkey featuring terraces of mineral-rich thermal waters cascading down white travertine terraces.", "https://images.pexels.com/photos/10212470/pexels-photo-10212470.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Namib Desert", -24.7287, 15.2773, "The Namib Desert is a coastal desert in southern Africa known for its vast sand dunes and stunning landscapes.", "https://images.pexels.com/photos/3714898/pexels-photo-3714898.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Antarctica", -82.8628, 135.0000, "Antarctica is Earth's southernmost continent", "https://images.pexels.com/photos/48178/mountains-ice-bergs-antarctica-berg-48178.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Mount Cook", -43.7340, 170.0961, "Mount Cook", "https://images.pexels.com/photos/12638483/pexels-photo-12638483.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Great Blue Hole", 17.3187, -87.5352, "The Great Blue Hole is a giant underwater sinkhole off the coast of Belize", "https://images.pexels.com/photos/968299/pexels-photo-968299.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Yellowstone National Park", 44.4279, -110.5885, "Yellowstone National Park is a vast wilderness area in the United States", "https://images.pexels.com/photos/2416600/pexels-photo-2416600.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Tikal", 17.2220, -89.6237, "Tikal is an ancient Mayan city located in the rainforests of Guatemala", "https://images.pexels.com/photos/14843659/pexels-photo-14843659.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Parc G\u00fcell", 41.4145, 2.1527, "Parc Güell is a public park in Barcelona", "https://images.pexels.com/photos/11816123/pexels-photo-11816123.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Bora Bora", -16.5004, -151.7415, "Bora Bora is a tropical paradise and popular tourist destination in French Polynesia", "https://images.pexels.com/photos/1188473/pexels-photo-1188473.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["The Louvre", 48.8606, 2.3376, "The Louvre is the world's largest art museum and a historic monument in Paris", "https://images.pexels.com/photos/6644765/pexels-photo-6644765.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Royal Palace of Madrid", 40.4170, -3.7144, "The Royal Palace of Madrid is the official residence of the Spanish royal family and a major cultural site in Madrid", "https://images.pexels.com/photos/1547738/pexels-photo-1547738.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Tower of London", 51.5081, -0.0759, "The Tower of London is a historic castle located on the River Thames in London", "https://images.pexels.com/photos/248193/pexels-photo-248193.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Cappadocia", 38.6431, 34.8283, "Cappadocia is a unique region in Turkey characterized by its surreal rock formations", "https://images.pexels.com/photos/3889704/pexels-photo-3889704.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Victoria Falls", -17.9244, 25.8567, "Victoria Falls is a stunning waterfall on the Zambezi River", "https://images.pexels.com/photos/1637146/pexels-photo-1637146.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Mont Saint-Michel", 48.6361, -1.5113, "Mont Saint-Michel is a rocky island commune in Normandy", "https://images.pexels.com/photos/8910668/pexels-photo-8910668.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Westminster Abbey", 51.4994, -0.1276, "Westminster Abbey is a historic Gothic abbey in London", "https://images.pexels.com/photos/162001/pexels-photo-162001.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Alcatraz Island", 37.8267, -122.4233, "Alcatraz Island is a former high-security federal prison located in San Francisco Bay", "https://images.pexels.com/photos/2913776/pexels-photo-2913776.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["The Shard", 51.5045, -0.0865, "The Shard is a skyscraper and one of the tallest buildings in Europe", "https://images.pexels.com/photos/940309/pexels-photo-940309.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["The Acropolis", 37.9715, 23.7266, "The Acropolis is an ancient citadel featuring several historic buildings", "https://images.pexels.com/photos/3264723/pexels-photo-3264723.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Giant's Causeway", 55.2408, -6.5115, "Giant's Causeway is a natural wonder in Northern Ireland consisting of hexagonal basalt columns formed by volcanic activity.", "https://images.pexels.com/photos/13570767/pexels-photo-13570767.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+    ["Grand Palace", 13.7510, 100.4926, "The Grand Palace is a magnificent palace complex in Bangkok", "https://images.pexels.com/photos/5825366/pexels-photo-5825366.jpeg?auto=compress&cs=tinysrgb&h=650&w=940"],
+
 ]
 // Gets random element from the array
 const getRandomElementFrom2DArray = (array) => {
@@ -316,35 +375,7 @@ function hideModal() {
     document.getElementById('stats-modal').classList.remove('active');
 }
 
-var img = document.getElementById('landmark-photo');
 
-img.addEventListener('load', function () {
-    var maxWidth = 600;
-    var maxHeight = 500;
-
-    if (img.naturalWidth > maxWidth || img.naturalHeight > maxHeight) {
-        var aspectRatio = img.naturalWidth / img.naturalHeight;
-        var width = img.naturalWidth;
-        var height = img.naturalHeight;
-
-        if (aspectRatio > 1) {
-            // Landscape image
-            if (img.naturalWidth > maxWidth) {
-                width = maxWidth;
-                height = maxWidth / aspectRatio;
-            }
-        } else {
-            // Portrait image
-            if (img.naturalHeight > maxHeight) {
-                height = maxHeight;
-                width = maxHeight * aspectRatio;
-            }
-        }
-
-        img.width = width;
-        img.height = height;
-    }
-});
 
 // Get the modal element and the close button
 const modal = document.getElementById('score-modal');
@@ -358,5 +389,3 @@ function hideScoreModal() {
     };
     submitButton.style.display = "block";
 }
-
-

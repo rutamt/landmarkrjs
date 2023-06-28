@@ -83,7 +83,7 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: rgba(255, 255, 255, 0.623);
+    background-color: rgba(255, 255, 255, 0.836);
     padding: 20px;
     z-index: 999;
     text-align: center;
